@@ -1,0 +1,41 @@
+Synchronous I/O
+Program is blocked at each instruction until the I/O is complete.
+
+OS Example:
+1. Program asks Kernal/OS to read from disk/driver/device
+2. Program main thread is taken off of the CPU
+3. Kernal/OS reads data from disk/driver/device
+4. Kernal/OS returns data to program
+5. Program can resume execution
+
+In this case, neither the program nor the kernel/OS can do anything else while the I/O is in progress on the disk/driver/device. This is called a blocking I/O.
+
+
+Asynchronous I/O
+Program can continue to execute other instructions while the I/O is in progress.
+
+- Caller sends a request
+- Caller can work on other things while the request is being processed
+- Caller either:
+  - Checks if the response is ready (epoll)
+  - Receiver calls back when it is done (io_uring)
+  - Spins up a new thread that does the work while the main thread remains in the CPU
+
+Example of an OS Asynchronout call (NodeJS):
+1. Program spins up a secondary thread
+2. Secondary thread reals from disk, OS blocks it
+3. Main program continuues running and executing code
+4. Secondary thread finishes the work and calls back main thread
+
+
+Synchronous vs Asynchronous in Request-Response
+- Synchronicity is a client property.
+- Most modern client libraries are asynchronous (axios, fetch, etc)
+
+Asynchronous workload is everywhere
+- Asynchronous programming (promises/futures)
+- Asynchronous backend processing (async/await)
+- Asynchronous I/O (epoll, io_uring, etc)
+- Asynchronous commits in postgres
+- Asynchronous replication
+

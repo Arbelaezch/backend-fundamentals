@@ -1,0 +1,23 @@
+# Request-Response
+
+## What is Request-Response?
+
+Request-Response is a communication pattern where a client sends a request to a server and the server responds with a response.
+
+## Where it is used?
+
+- HTTP, DNS, SSH
+- RPC (remote procedure call)
+- SQL and Database Protocols
+- APIs (REST/SOAP/GraphQL)
+
+## Anatomy of a Request-Response
+
+```
+GET / HTTP/1.1
+Headers
+<CRLF>
+BODY
+```
+
+You can send large files such as images in chunks using a request per chunk.
