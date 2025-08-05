@@ -1,0 +1,31 @@
+Short Polling
+Request is taking a while, I'll check with you later.
+
+It's short because it's a very quick time to poll.
+E.x.: Is this thing done or not?
+E.x.: Uploading a youtube video.
+
+Commonly used when you have a large request that you want to process asynchronously on the backend. You don't want to block the client while the request is being processed.
+
+
+What is Short Polling?
+1. Client sends a request
+2. Server responds immediately with a handle (unique identifier for the request)
+3. Server continues to process the request
+4. Client uses that handle to check for status by sending multiple "short" request/response as polls.
+
+Technically, making the poll is a request/response. The whole workflow is based on asynchronous communication.
+
+
+Pros:
+- Simple
+- Good for long running requests
+- Client can disconnect
+
+Cons:
+- Too chatty (too many requests). Most of these requests are completely useless (false).
+- Network bandwidth is wasted
+- Wasted backend resources
+
+
+

@@ -1,0 +1,14 @@
+Long Polling
+Request is taking too long, I'll check with you later. Talk to me only when it's ready.
+
+Client makes a poll request to the server, but the server doesn't respond immediately or until there is an entry in the queue.
+
+Used by Kafka
+
+Pros:
+- Less chatty than short polling
+- Confirms that the client can handle the request, unlike push
+- Client can disconnect
+
+Cons:
+- Not real time; client needs to make the request first before it can receive the response.
