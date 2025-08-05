@@ -1,0 +1,26 @@
+Request/Response isn't always ideal.
+- Client wants real time notifications from the backend.
+
+Push model is good for real time notifications.
+
+How it works:
+1. Client establishes connection to a server
+2. Server sends data to the client
+3. Client doesn't have to request anything.
+   - Protocol is usually bidirectional
+4. Server pushes data to the client whenever their is an action item in the queue.
+
+Example: RabbitMQ
+
+Pros:
+- Real time
+
+Cons:
+- Client must be online/connected to the server
+- Clients might not be able to handle the data volume
+- Requires bidirectional protocol
+- Polling is required for light clients
+
+Tip: When a connection is established, there is always a client source port and IP, and a server source port and IP. The client source port can be used as a unique identifier for the client.
+
+

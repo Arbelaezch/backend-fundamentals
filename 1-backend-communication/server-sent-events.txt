@@ -1,0 +1,23 @@
+Server Sent Events (SSE)
+One Request, a very very long response.
+
+- Client sends a request
+- Server responds with a stream of events with chunks of important data interspersed.
+- Client receives events as they are sent and parses the important data in the long stream.
+- Server never writes the end of the response.
+
+Pros:
+- Real time
+- Compatible with Request/Response
+
+Cons:
+- Client must be online & connected to the server
+- Clients might not be able to handle the data volume
+- Polling is preferred for light clients
+- HTTP/1.1 problem (6 connection limitation)
+
+
+
+
+
+
