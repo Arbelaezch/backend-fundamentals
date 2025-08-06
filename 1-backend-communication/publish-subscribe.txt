@@ -1,0 +1,17 @@
+Publish/Subscribe
+One publisher, many readers.
+
+Publisher sends a message to a topic/channel, and subscribers receive messages from that topic. The same service can be both a publisher and a subscriber.
+
+
+Pros:
+- Scales well with multiple receivers
+- Great for microservices
+- Loose coupling
+
+Cons:
+- Message delivery issues. How do you ensure that the message is delivered to all subscribers?
+- Complexity
+- Network saturation. If a lot of subscribers are connected, the publisher might not be able to send messages fast enough.
+
+

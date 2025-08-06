@@ -33,7 +33,3 @@ Understanding the fundamental difference between services that maintain client s
 
 ### [Sidecar Pattern](./sidecar-pattern.txt)
 A deployment pattern where auxiliary functionality (like logging, monitoring, or proxying) is deployed alongside the main application in a separate container or process.
-
----
-
-These patterns and concepts form the building blocks of modern backend architecture and will help you design more efficient, scalable, and maintainable distributed systems.
