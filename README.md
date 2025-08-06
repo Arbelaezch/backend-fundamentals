@@ -4,12 +4,12 @@ This intermediate-level course by Hussein Nasser explores the essential communic
 
 ## Course Topics
 
-• Backend communication design patterns (request-response, pub/sub, push, polling)
-• Core protocols: HTTP/1.1, HTTP/2, HTTP/3, gRPC, WebRTC, WebSockets
-• Transport layer fundamentals: TCP, UDP, QUIC
-• Security protocols: TLS 1.2, TLS 1.3, QUIC 0RTT
-• Connection establishment and kernel-level networking
-• Request parsing and processing optimization
-• Execution patterns: processes, threads, async I/O
-• Operating system fundamentals for backend engineers
-• Performance troubleshooting and system design principles
+- Backend communication design patterns (request-response, pub/sub, push, polling)
+- Core protocols: HTTP/1.1, HTTP/2, HTTP/3, gRPC, WebRTC, WebSockets
+- Transport layer fundamentals: TCP, UDP, QUIC
+- Security protocols: TLS 1.2, TLS 1.3, QUIC 0RTT
+- Connection establishment and kernel-level networking
+- Request parsing and processing optimization
+- Execution patterns: processes, threads, async I/O
+- Operating system fundamentals for backend engineers
+- Performance troubleshooting and system design principles
